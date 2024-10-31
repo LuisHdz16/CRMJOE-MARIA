@@ -1,0 +1,29 @@
+﻿@page
+@model crmEmpresa.Pages.Clientes.CreateModel
+@{
+}
+
+<form method="post" class="needs-validation" novalidate id="purchaseForm">
+    <label asp-for="Nombre" for="Nombre">Nombre:</label><br>
+    <input asp-for="Nombre" type="text" id="Nombre" name="Nombre" required><br>
+    <span asp-validation-for="Nombre" class="text-danger"></span><br>
+
+    <label asp-for="Apellido" for="Apellido">Apellido:</label><br>
+    <input asp-for="Apellido" type="text" id="Apellido" name="Apellido" required><br>
+    <span asp-validation-for="Apellido" class="text-danger"></span><br>
+
+    <label asp-for="Correo" for="Correo">Correo electrónico:</label><br>
+    <input asp-for="Correo" type="email" id="Correo" name="Correo" required><br>
+    <span asp-validation-for="Correo" class="text-danger"></span><br>
+
+    <label asp-for="Telefono" for="Telefono">Teléfono:</label><br>
+    <input asp-for="Telefono" type="tel" id="Telefono" name="Telefono" required><br>
+    <span asp-validation-for="Telefono" class="text-danger"></span><br>
+
+    <a href="~/Clientes/Index" class="btn btn-secondary">Regresar</a>
+    <button type="submit" class="btn btn-success mt-3">Agregar</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

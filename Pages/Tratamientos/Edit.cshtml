@@ -1,0 +1,33 @@
+﻿@page "{id:int}"
+@model crmEmpresa.Pages.Tratamientos.EditModel
+@{
+}
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Nombre">Nombre del Tratamiento:</label>
+        <input asp-for="Nombre" type="text" class="form-control" required />
+        <span asp-validation-for="Nombre" class="text-danger"></span><br>
+    </div>
+    <div class="form-group">
+        <label asp-for="Descripcion">Descripcion:</label>
+        <input asp-for="Descripcion" type="text" class="form-control" required />
+        <span asp-validation-for="Descripcion" class="text-danger"></span><br>
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DuracionEstimada">DuracionEstimada:</label>
+        <input asp-for="DuracionEstimada" type="text" class="form-control" required />
+        <span asp-validation-for="DuracionEstimada" class="text-danger"></span><br>
+
+    </div>
+    <a href="~/Clientes/Index" class="btn btn-secondary">Cancelar</a>
+
+    <button type="submit" class="btn btn-success mt-3">Guardar Cambios Tratamiento</button>
+</form>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

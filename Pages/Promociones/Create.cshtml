@@ -1,0 +1,40 @@
+﻿@page
+@model crmEmpresa.Pages.Promociones.CreateModel
+@{
+}
+
+<form method="post" class="needs-validation" novalidate>
+    <div class="form-group">
+        <label asp-for="Nombre">Nombre de la promoción:</label>
+        <input asp-for="Nombre" type="text" class="form-control" required />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Tratamiento">Tratamiento:</label>
+        <select asp-for="Tratamiento" class="form-control" required>
+            <option value="">Seleccione un tratamiento</option>
+            @foreach (var tratamiento in Model.Tratamientos)
+            {
+                <option value="@tratamiento">@tratamiento</option>
+            }
+        </select>
+        <span asp-validation-for="Tratamiento" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Descripcion">Descripción:</label>
+        <input asp-for="Descripcion" type="text" class="form-control" required />
+        <span asp-validation-for="Descripcion" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Estatus">Estatus:</label>
+        <select asp-for="Estatus" class="form-control" required>
+            <option value="Disponible">Disponible</option>
+            <option value="No disponible">No disponible</option>
+        </select>
+        <span asp-validation-for="Estatus" class="text-danger"></span>
+    </div>
+    <a href="~/Promociones/Index" class="btn btn-secondary">Regresar</a>
+    <button type="submit" class="btn btn-primary mt-3">Agregar Promoción</button>
+</form>

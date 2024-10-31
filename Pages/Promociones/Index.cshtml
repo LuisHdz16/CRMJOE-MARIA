@@ -1,0 +1,40 @@
+﻿@page
+@model crmEmpresa.Pages.Promociones.IndexModel
+@{
+}
+
+<a href="~/Promociones/Create">Agregar Promoción</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Tratamiento</th>
+            <th>Descripción</th>
+            <th>Estatus</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Promociones.Count > 0)
+        { 
+        
+            @foreach (var promo in Model.Promociones)
+            {
+                <tr>
+                    <td>@promo.Nombre</td>
+                    <td>@promo.Tratamiento</td>
+                    <td>@promo.Descripcion</td>
+                    <td>@promo.Estatus</td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@promo.Id" class="btn btn-warning btn-sm">Editar</a>
+                        <form method="post" asp-page-handler="Eliminar" asp-route-id="@promo.Id" style="display:inline;">
+                            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                        </form>
+                        <a asp-page="/Promociones/DetallesPromocion" asp-route-promocionId="@promo.Id" class="btn btn-info">Enviar</a>
+                    </td>
+                </tr>
+             }
+        }
+    </tbody>
+</table>

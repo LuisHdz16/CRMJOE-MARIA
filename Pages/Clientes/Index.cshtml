@@ -1,0 +1,51 @@
+﻿@page
+@model crmEmpresa.Pages.Clientes.IndexModel
+@{
+}
+
+<a href="~/Clientes/Create">Agregar Cliente</a>
+
+<form method="get" class="form-inline mb-4">
+    <select name="searchField" class="form-control">
+        <option value="Todos" selected>Ver Todos</option>
+        <option value="Nombre">Nombre</option>
+        <option value="Apellido">Apellido</option>
+        <option value="Correo">Correo</option>
+        <option value="Telefono">Teléfono</option>
+    </select>
+    <input type="text" name="searchTerm" placeholder="Buscar..." class="form-control mx-2" value="@Model.SearchTerm" />
+    <button type="submit" class="btn btn-secondary">Buscar</button>
+</form>
+
+<table class="table table-bordered mt-4">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Teléfono</th>
+            <th>Correo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model.Clientes)
+        {
+            <tr>
+                <td>@cliente.Nombre</td>
+                <td>@cliente.Apellido</td>
+                <td>@cliente.Correo</td>
+                <td>@cliente.Telefono</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@cliente.Id" class="btn btn-warning">Editar</a>
+                    <form method="post" asp-page-handler="Delete" asp-route-id="@cliente.Id" class="d-inline">
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

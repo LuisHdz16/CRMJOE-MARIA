@@ -1,0 +1,42 @@
+﻿@page
+@model crmEmpresa.Pages.Citas.IndexModel
+@{
+}
+
+<a href="~/Citas/Create">Agendar Cita</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Cliente</th>
+            <th>Tratamiento</th>
+            <th>Promocion</th>
+            <th>Fecha</th>
+            <th>Precio</th>
+            <th>Estatus</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Citas.Count > 0)
+        {
+            foreach (var re in Model.Citas)
+            {
+                <tr>
+                    <td>@re.Cliente</td>
+                    <td>@re.Tratamiento</td>
+                    <td>@re.Promocion</td>
+                    <td>@re.Fecha</td>
+                    <td>@re.Precio</td>
+                    <td>@re.Estatus</td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@re.Id" class="btn btn-warning btn-sm">Editar</a>
+                        <form method="post" asp-page-handler="delete" asp-route-id="@re.Id" style="display:inline;">
+                            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

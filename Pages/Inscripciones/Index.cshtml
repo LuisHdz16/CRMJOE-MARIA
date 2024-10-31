@@ -1,0 +1,49 @@
+﻿@page
+@model crmEmpresa.Pages.Inscripciones.IndexModel
+@{
+}
+
+<a href="~/Inscripciones/Create">Agregar Inscripcion</a>
+
+<table class="table table-bordered mt-4">
+    <thead>
+        <tr>
+            <th>Cliente</th>
+            <th>Curso</th>
+            <th>FechaInicio</th>
+            <th>FechaFin</th>
+            <th>Duracion</th>
+            <th>Precio</th>
+            <th>Estatus</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Inscripciones.Count > 0)
+        {
+            foreach (var curso in Model.Inscripciones)
+            {
+                <tr>
+                    <td>@curso.Cliente</td>
+                    <td>@curso.Curso</td>
+                    <td>@curso.FechaInicio</td>
+                    <td>@curso.FechaFin</td>
+                    <td>@curso.Duracion</td>
+                    <td>@curso.Precio</td>
+                    <td>@curso.Estatus</td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@curso.Id" class="btn btn-warning">Editar</a>
+                        <form method="post" asp-page-handler="Delete" asp-route-id="@curso.Id" class="d-inline">
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

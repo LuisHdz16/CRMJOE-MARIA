@@ -1,0 +1,58 @@
+﻿@page "{id:int}"
+@model crmEmpresa.Pages.Citas.EditModel
+@{
+}
+
+
+<form method="post" class="needs-validation" novalidate>
+    <label for="Cliente">Nombre del Cliente:</label><br>
+    <select asp-for="Cliente" id="Cliente" required>
+        <option value="">Seleccione un cliente</option>
+        @foreach (var cliente in Model.Clientes)
+        {
+            <option value="@cliente">@cliente</option>
+        }
+    </select><br>
+    <span asp-validation-for="Cliente" class="text-danger"></span><br>
+
+    <label for="Tratamiento">Tratamiento:</label><br>
+    <select asp-for="Tratamiento" id="Tratamiento" required onchange="cargarPromociones()">
+        <option value="">Seleccione un Tratamiento</option>
+        @foreach (var tratamiento in Model.Tratamientos)
+        {
+            <option value="@tratamiento">@tratamiento</option>
+        }
+    </select>
+    <span asp-validation-for="Tratamiento" class="text-danger"></span><br>
+
+    <label for="Promocion">Promoción:</label><br>
+    <select asp-for="Promocion" id="Promocion" onchange="actualizarPrecio()">
+        <option value="">Seleccione una promoción</option>
+        @foreach (var promo in Model.Promociones)
+        {
+            <option value="@promo">
+                @promo
+            </option>
+        }
+    </select>
+    <span asp-validation-for="Promocion" class="text-danger"></span><br>
+
+    <label asp-for="Fecha">Fecha:</label><br>
+    <input asp-for="Fecha" type="date" required /><br>
+    <span asp-validation-for="Fecha" class="text-danger"></span><br>
+
+    <label asp-for="Precio">Precio:</label>
+    <input asp-for="Precio" id="Precio" type="text" class="form-control" readonly />
+    <span asp-validation-for="Precio" class="text-danger"></span><br>
+
+    <label asp-for="Estatus">Estatus:</label><br>
+    <select asp-for="Estatus" class="form-control" required>
+        <option value="Próximamente">Próximamente</option>
+        <option value="Realizado">Realizado</option>
+        <option value="Cancelado">Cancelado</option>
+    </select><br>
+    <span asp-validation-for="Estatus" class="text-danger"></span><br>
+
+    <a href="~/Citas/Index" class="btn btn-secondary">Cancelar</a>
+    <button type="submit" class="btn btn-success mt-3">Guardar Cambios</button>
+</form>

@@ -1,0 +1,35 @@
+﻿@page
+@model crmEmpresa.Pages.Tratamientos.IndexModel
+@{
+}
+
+<a href="~/Tratamientos/Create">Agregar Tratamiento</a>
+
+<table class="table table-bordered mt-4">
+    <thead>
+        <tr>
+            <th>Nombre del Tratamiento</th>
+            <th>Descripción</th>
+            <th>Duracion Estimada</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Tratamientos.Count > 0)
+        {
+            foreach (var tratamiento in Model.Tratamientos)
+            {
+                <tr>
+                    <td>@tratamiento.Nombre</td>
+                    <td>@tratamiento.Descripcion</td>
+                    <td>@tratamiento.DuracionEstimada</td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@tratamiento.Id" class="btn btn-warning">Editar</a>
+                        <form method="post" asp-page-handler="Delete" asp-route-id="@tratamiento.Id" class="d-inline">
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

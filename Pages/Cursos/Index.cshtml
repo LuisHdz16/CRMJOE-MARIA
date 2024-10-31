@@ -1,0 +1,36 @@
+﻿@page
+@model crmEmpresa.Pages.Cursos.IndexModel
+@{
+}
+
+<a href="~/Cursos/Create">Agregar Curso</a>
+<table class="table table-bordered mt-4">
+    <thead>
+        <tr>
+            <th>Nombre del Curso</th>
+            <th>Descripción</th>
+            <th>Estatus</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Cursos.Count > 0)
+        {
+            foreach (var curso in Model.Cursos)
+            {
+                <tr>
+                    <td>@curso.Nombre</td>
+                    <td>@curso.Descripcion</td>
+                    <td>@curso.Estatus</td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@curso.Id" class="btn btn-warning">Editar</a>
+                        <form method="post" asp-page-handler="Delete" asp-route-id="@curso.Id" class="d-inline">
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+
+        }
+    </tbody>
+</table>

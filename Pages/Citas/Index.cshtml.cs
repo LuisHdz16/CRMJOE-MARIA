@@ -30,7 +30,7 @@ namespace crmEmpresa.Pages.Citas
                             Cliente = data[0],
                             Tratamiento = data[1],
                             Promocion = data[2],
-                            Fecha = data[3],
+                            Fecha = DateTime.Parse(data[3]),
                             Precio = decimal.Parse(data[4]),
                             Estatus = data[5]
                         });

@@ -25,8 +25,8 @@ namespace crmEmpresa.Pages.Inscripciones
                             Id = id++,
                             Cliente = data[0],
                             Curso = data[1],
-                            FechaInicio = data[2],
-                            FechaFin = data[3],
+                            FechaInicio = DateTime.Parse(data[2]),
+                            FechaFin = DateTime.Parse(data[3]),
                             Duracion = data[4],
                             Precio = decimal.Parse(data[5]),
                             Estatus = data[6]

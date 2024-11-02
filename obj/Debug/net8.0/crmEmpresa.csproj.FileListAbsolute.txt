@@ -28,3 +28,4 @@ E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\crmEmpresa\crmEmpresa\
 E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\crmEmpresa\crmEmpresa\obj\Debug\net8.0\crmEmpresa.pdb
 E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\crmEmpresa\crmEmpresa\obj\Debug\net8.0\crmEmpresa.genruntimeconfig.cache
 E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\crmEmpresa\crmEmpresa\obj\Debug\net8.0\ref\crmEmpresa.dll
+E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\crmEmpresa\crmEmpresa\obj\Debug\net8.0\crmEmpresa.sourcelink.json

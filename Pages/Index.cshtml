@@ -1,7 +1,130 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Actividades de Hoy";
 }
 
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Actividades de Hoy</h1>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2 class="mb-0">Citas de Hoy</h2>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Tratamiento</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Citas.Count > 0)
+                        {
+                            foreach (var re in Model.Citas)
+                            {
+                                <tr>
+                                    <td>@re.Cliente</td>
+                                    <td>@re.Tratamiento</td>
+                                    <td>@re.Precio.ToString("C")</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="3" class="text-center">No hay citas para hoy.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2 class="mb-0">Cursos que se imparten hoy</h2>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Curso</th>
+                            <th>Fecha Inicio</th>
+                            <th>Fecha Fin</th>
+                            <th>Duración</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Inscripciones.Count > 0)
+                        {
+                            foreach (var curso in Model.Inscripciones)
+                            {
+                                <tr>
+                                    <td>@curso.Cliente</td>
+                                    <td>@curso.Curso</td>
+                                    <td>@curso.FechaInicio.ToShortDateString()</td>
+                                    <td>@curso.FechaFin.ToShortDateString()</td>
+                                    <td>@curso.Duracion</td>
+                                    <td>@curso.Precio.ToString("C")</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="6" class="text-center">No hay cursos programados para hoy.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2 class="mb-0">Promociones Disponibles</h2>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tratamiento</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Promociones.Count > 0)
+                        {
+                            foreach (var promo in Model.Promociones)
+                            {
+                                <tr>
+                                    <td>@promo.Nombre</td>
+                                    <td>@promo.Tratamiento</td>
+                                    <td>@promo.Descripcion</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="3" class="text-center">No hay promociones disponibles.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 

@@ -3,66 +3,71 @@
 @{
 }
 
+<link rel="stylesheet" href="~/css/InscCreateyEdit.css">
+
 <form method="post">
     <div class="form-group">
-        <label asp-for="Cliente">Cliente:</label>
-        <select asp-for="Cliente" id="Cliente" required>
+        <label asp-for="Cliente" class="font-weight-bold">Cliente:</label>
+        <select asp-for="Cliente" id="Cliente" class="form-control" required>
             <option value="">Seleccione un cliente</option>
             @foreach (var cliente in Model.Clientes)
             {
                 <option value="@cliente">@cliente</option>
             }
-        </select><br>
+        </select>
         <span asp-validation-for="Cliente" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Curso">Curso:</label>
-        <select asp-for="Curso" id="Curso" required>
+        <label asp-for="Curso" class="font-weight-bold">Curso:</label>
+        <select asp-for="Curso" id="Curso" class="form-control" required>
             <option value="">Seleccione un Curso</option>
             @foreach (var curso in Model.Cursos)
             {
                 <option value="@curso">@curso</option>
             }
-        </select><br>
+        </select>
         <span asp-validation-for="Curso" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="FechaInicio">FechaInicio:</label>
-        <input asp-for="FechaInicio" type="date" required /><br>
+        <label asp-for="FechaInicio" class="font-weight-bold">Fecha Inicio:</label>
+        <input asp-for="FechaInicio" type="date" class="form-control" required />
         <span asp-validation-for="FechaInicio" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="FechaFin">FechaFin:</label>
-        <input asp-for="FechaFin" type="date" required /><br>
+        <label asp-for="FechaFin" class="font-weight-bold">Fecha Fin:</label>
+        <input asp-for="FechaFin" type="date" class="form-control" required />
         <span asp-validation-for="FechaFin" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Duracion">Duracion:</label>
+        <label asp-for="Duracion" class="font-weight-bold">Duración:</label>
         <input asp-for="Duracion" type="text" class="form-control" required />
         <span asp-validation-for="Duracion" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Precio">Precio:</label>
+        <label asp-for="Precio" class="font-weight-bold">Precio:</label>
         <input asp-for="Precio" type="number" step="0.01" class="form-control" required />
         <span asp-validation-for="Precio" class="text-danger"></span>
     </div>
 
-    <div class="form-group">
-        <label asp-for="Estatus">Estatus:</label>
+    <div class="custom-form-group">
+        <label asp-for="Estatus" class="font-weight-bold">Estatus:</label>
         <select asp-for="Estatus" class="form-control" required>
             <option value="Próximamente">Próximamente</option>
             <option value="Realizado">Realizado</option>
             <option value="Por Realizar">Por Realizar</option>
-        </select><br>
+        </select>
         <span asp-validation-for="Estatus" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-success mt-3">Agregar Inscripción</button>
+    <div class="btn-container">
+        <a href="~/Inscripciones/Index" class="btn btn-secondary me-2">Cancelar</a>
+        <button type="submit" class="btn btn-success">Agregar Inscripción</button>
+    </div>
 </form>
 
 @section Scripts {

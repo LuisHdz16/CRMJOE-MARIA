@@ -1,1 +1,4 @@
-Nombre: Ahorra50% Tratamiento: Micropigmentacion Descripcion: 50% DE DESCUENTO EN MICROPIGMENTACION  Estatus: Disponible
+Nombre: Ahorra50% Tratamiento: Micropigmentacion Descripcion: 50% DE DESCUENTO EN MICROPIGMENTACION   Estatus: Disponible
+Nombre: thg Tratamiento: Micropigmentacion Descripcion: ghng   Estatus: No disponible
+Nombre: aldeea Tratamiento: Micropigmentacion Descripcion: ng  Estatus: Disponible
+Nombre: ñ Tratamiento: Micropigmentacion Descripcion: fgfdfgdgdd Estatus: Disponible

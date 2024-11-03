@@ -1,0 +1,15 @@
+﻿button, .btn {
+    font-weight: bold; /* Poner en negrita */
+    font-family: Arial, sans-serif; /* Cambia a la fuente que prefieras */
+    font-size: 1.5em; /* Ajusta el tamaño de la fuente si es necesario */
+}
+
+label {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    font-size: 1em;
+    padding: 8px;
+}

@@ -1,0 +1,25 @@
+﻿/* Ajustar el enlace para que se vea como botón */
+.add-client-link {
+    font-size: 1.2em; /* Cambia el tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    color: #000; /* Cambia el color del texto */
+    background-color: #e0e0e0; /* Fondo gris */
+    padding: 8px 16px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Quitar el subrayado */
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* Centrar y espaciar el contenedor general */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacio entre los elementos (enlace, formulario, tabla) */
+}
+
+/* Aumentar el tamaño de fuente de las celdas de la tabla */
+.table th, .table td {
+    font-size: 2em;
+}

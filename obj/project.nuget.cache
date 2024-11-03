@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ahyP5ANUSGQ=",
+  "dgSpecHash": "3/ncZesC6hQ=",
   "success": true,
-  "projectFilePath": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\crmEmpresa\\crmEmpresa\\crmEmpresa.csproj",
+  "projectFilePath": "C:\\Users\\aleja\\Desktop\\CRMJOE-MARIA\\crmEmpresa.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Luis Hernández\\.nuget\\packages\\bootstrap\\5.3.3\\bootstrap.5.3.3.nupkg.sha512"
+    "C:\\Users\\aleja\\.nuget\\packages\\bootstrap\\5.3.3\\bootstrap.5.3.3.nupkg.sha512"
   ],
   "logs": []
 }

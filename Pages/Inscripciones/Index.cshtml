@@ -3,15 +3,17 @@
 @{
 }
 
-<a href="~/Inscripciones/Create">Agregar Inscripcion</a>
+<link rel="stylesheet" href="~/css/InscIndex.css">
+
+<a href="~/Inscripciones/Create" class="add-client-link">Agregar Inscripcion</a>
 
 <table class="table table-bordered mt-4">
     <thead>
         <tr>
             <th>Cliente</th>
             <th>Curso</th>
-            <th>FechaInicio</th>
-            <th>FechaFin</th>
+            <th>Fecha Inicio</th>
+            <th>Fecha Fin</th>
             <th>Duracion</th>
             <th>Precio</th>
             <th>Estatus</th>
@@ -32,9 +34,9 @@
                     <td>@curso.Precio</td>
                     <td>@curso.Estatus</td>
                     <td>
-                        <a asp-page="Edit" asp-route-id="@curso.Id" class="btn btn-warning">Editar</a>
+                        <a asp-page="Edit" asp-route-id="@curso.Id" class="btn btn-warning btn-lg">Editar</a>
                         <form method="post" asp-page-handler="Delete" asp-route-id="@curso.Id" class="d-inline">
-                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                            <button type="submit" class="btn btn-danger btn-lg">Eliminar</button>
                         </form>
                     </td>
                 </tr>

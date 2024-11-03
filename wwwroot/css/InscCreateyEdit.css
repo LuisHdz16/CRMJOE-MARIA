@@ -1,0 +1,25 @@
+﻿button, .btn {
+    font-weight: bold; /* Poner en negrita */
+    font-family: Arial, sans-serif; /* Cambia a la fuente que prefieras */
+    font-size: 1.5em; /* Ajusta el tamaño de la fuente si es necesario */
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.form-control {
+    font-size: 1.2em;
+}
+
+label {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.custom-form-group .form-control {
+    font-weight: bold;
+    font-size: 1.2em;
+}

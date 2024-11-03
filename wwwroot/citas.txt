@@ -1,1 +1,5 @@
-Cliente: luis mario Hernandez Cantu Tratamiento: Micropigmentacion Promocion: Ahorra50% Fecha: 2024-11-01 Precio: 0 Estatus: Próximamente
+Cliente: luis mario Hernandez Cantu Tratamiento: Micropigmentacion Promocion: Sin promoción Fecha: 2024-11-04 Precio: 400 Estatus: Próximamente
+Cliente: luis mario Hernandez Cantu Tratamiento: Micropigmentacion Promocion: Ahorra50% Fecha: 2024-11-13 Precio: 400 Estatus: Cancelado
+Cliente: Angelito  Lopez Garcia Tratamiento: Micropigmentacion Promocion: Ahorra50% Fecha: 2024-11-15 Precio: 400 Estatus: Próximamente
+Cliente: Angelito  Lopez Garcia Tratamiento: Micropigmentacion Promocion: Sin promoción Fecha: 2024-11-07 Precio: 400 Estatus: Próximamente
+Cliente: Angelito  Lopez Garcia Tratamiento: Micropigmentacion Promocion: Sin promoción Fecha: 2024-11-13 Precio: 800 Estatus: Próximamente

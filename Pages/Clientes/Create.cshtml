@@ -3,6 +3,8 @@
 @{
 }
 
+<link rel="stylesheet" href="~/css/ClientesCreateyEdit.css">
+
 <form method="post" class="needs-validation" novalidate id="purchaseForm">
     <label asp-for="Nombre" for="Nombre">Nombre:</label><br>
     <input asp-for="Nombre" type="text" id="Nombre" name="Nombre" required><br>
@@ -20,8 +22,11 @@
     <input asp-for="Telefono" type="tel" id="Telefono" name="Telefono" required><br>
     <span asp-validation-for="Telefono" class="text-danger"></span><br>
 
-    <a href="~/Clientes/Index" class="btn btn-secondary">Regresar</a>
-    <button type="submit" class="btn btn-success mt-3">Agregar</button>
+    <div class="btn-container">
+        <a href="~/Clientes/Index" class="btn btn-secondary me-2">Regresar</a>
+        <button type="submit" class="btn btn-success">Agregar</button>
+    </div>
+
 </form>
 
 @section Scripts {

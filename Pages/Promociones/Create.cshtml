@@ -3,16 +3,19 @@
 @{
 }
 
+<link rel="stylesheet" href="~/css/PromoCreateyEdit.css">
+
 <form method="post" class="needs-validation" novalidate>
     <div class="form-group">
         <label asp-for="Nombre">Nombre de la promoción:</label>
         <input asp-for="Nombre" type="text" class="form-control" required />
         <span asp-validation-for="Nombre" class="text-danger"></span>
     </div>
+
     <div class="form-group">
-        <label asp-for="Tratamiento">Tratamiento:</label>
-        <select asp-for="Tratamiento" class="form-control" required>
-            <option value="">Seleccione un tratamiento</option>
+        <label asp-for="Tratamiento" class="font-weight-bold">Tratamiento:</label>
+        <select asp-for="Tratamiento" id="Tratamiento" class="form-control" required>
+            <option value="" disabled selected>Seleccione un tratamiento</option> <!-- Opción deshabilitada por defecto -->
             @foreach (var tratamiento in Model.Tratamientos)
             {
                 <option value="@tratamiento">@tratamiento</option>
@@ -21,20 +24,35 @@
         <span asp-validation-for="Tratamiento" class="text-danger"></span>
     </div>
 
+    <script>
+        // Verifica antes de enviar el formulario que "Seleccione un tratamiento" no esté seleccionado
+        document.getElementById('Tratamiento').addEventListener('change', function () {
+            if (this.value === '') {
+                this.setCustomValidity('Por favor, seleccione una opción válida.');
+            } else {
+                this.setCustomValidity(''); // Elimina el mensaje si es una opción válida
+            }
+        });
+    </script>
+
+
     <div class="form-group">
         <label asp-for="Descripcion">Descripción:</label>
         <input asp-for="Descripcion" type="text" class="form-control" required />
         <span asp-validation-for="Descripcion" class="text-danger"></span>
     </div>
 
-    <div class="form-group">
+    <div class="custom-form-group">
         <label asp-for="Estatus">Estatus:</label>
         <select asp-for="Estatus" class="form-control" required>
             <option value="Disponible">Disponible</option>
             <option value="No disponible">No disponible</option>
         </select>
-        <span asp-validation-for="Estatus" class="text-danger"></span>
+        <span asp-validation-for="Estatus" class="validation-message text-danger"></span>
     </div>
-    <a href="~/Promociones/Index" class="btn btn-secondary">Regresar</a>
-    <button type="submit" class="btn btn-primary mt-3">Agregar Promoción</button>
+
+    <div class="btn-container">
+        <a href="~/Promociones/Index" class="btn btn-secondary me-2">Regresar</a>
+        <button type="submit" class="btn btn-success">Agregar Promoción</button>
+    </div>
 </form>

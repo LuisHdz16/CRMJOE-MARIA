@@ -3,6 +3,8 @@
 @{
 }
 
+<link rel="stylesheet" href="~/css/ClientesCreateyEdit.css">
+
 <form method="post">
     <label asp-for="Nombre">Nombre:</label><br>
     <input asp-for="Nombre" type="text" name="Nombre" required><br>
@@ -20,8 +22,10 @@
     <input asp-for="Telefono" type="tel" id="Telefono" name="Telefono" required><br>
     <span asp-validation-for="Telefono" class="text-danger"></span><br>
 
-    <a href="~/Clientes/Index" class="btn btn-secondary">Cancelar</a>
-    <button type="submit" class="btn btn-success mt-3">Guardar cambios</button>
+    <div class="btn-container">
+        <a href="~/Clientes/Index" class="btn btn-secondary me-2">Cancelar</a>
+        <button type="submit" class="btn btn-success">Guardar cambios</button>
+    </div>
 </form>
 
 @section Scripts {

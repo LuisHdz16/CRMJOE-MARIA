@@ -3,7 +3,9 @@
 @{
 }
 
-<a href="~/Tratamientos/Create">Agregar Tratamiento</a>
+<link rel="stylesheet" href="~/css/TrataIndex.css">
+
+<a href="~/Tratamientos/Create" class="add-client-link">Agregar Tratamiento</a>
 
 <table class="table table-bordered mt-4">
     <thead>
@@ -11,6 +13,7 @@
             <th>Nombre del Tratamiento</th>
             <th>Descripción</th>
             <th>Duracion Estimada</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -23,9 +26,9 @@
                     <td>@tratamiento.Descripcion</td>
                     <td>@tratamiento.DuracionEstimada</td>
                     <td>
-                        <a asp-page="Edit" asp-route-id="@tratamiento.Id" class="btn btn-warning">Editar</a>
+                        <a asp-page="Edit" asp-route-id="@tratamiento.Id" class="btn btn-warning btn-lg">Editar</a>
                         <form method="post" asp-page-handler="Delete" asp-route-id="@tratamiento.Id" class="d-inline">
-                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                            <button type="submit" class="btn btn-danger btn-lg">Eliminar</button>
                         </form>
                     </td>
                 </tr>

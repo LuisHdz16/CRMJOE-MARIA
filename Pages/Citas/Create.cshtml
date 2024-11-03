@@ -3,55 +3,86 @@
 @{
 }
 
+<link rel="stylesheet" href="~/css/CitasCreateyEdit.css">
+
 <form method="post" class="needs-validation" novalidate>
-    <label for="Cliente">Nombre del Cliente:</label><br>
-    <select asp-for="Cliente" id="Cliente" required>
-        <option value="">Seleccione un cliente</option>
-        @foreach (var cliente in Model.Clientes)
-        {
-            <option value="@cliente">@cliente</option>
-        }
-    </select><br>
-    <span asp-validation-for="Cliente" class="text-danger"></span><br>
+    <div class="form-group">
+        <label asp-for="Cliente" class="font-weight-bold">Nombre del Cliente:</label>
+        <select asp-for="Cliente" id="Cliente" class="form-control" required>
+            <option value="">Seleccione un cliente</option>
+            @foreach (var cliente in Model.Clientes)
+            {
+                <option value="@cliente">@cliente</option>
+            }
+        </select>
+        <span asp-validation-for="Cliente" class="text-danger"></span>
+    </div>
 
-    <label for="Tratamiento">Tratamiento:</label><br>
-    <select asp-for="Tratamiento" id="Tratamiento" required onchange="cargarPromociones()">
-        <option value="">Seleccione un Tratamiento</option>
-        @foreach (var tratamiento in Model.Tratamientos)
-        {
-            <option value="@tratamiento">@tratamiento</option>
-        }
-    </select>
-    <span asp-validation-for="Tratamiento" class="text-danger"></span><br>
+    <div class="form-group">
+        <label asp-for="Tratamiento" class="font-weight-bold">Tratamiento:</label>
+        <select asp-for="Tratamiento" id="Tratamiento" class="form-control" required onchange="cargarPromociones()">
+            <option value="">Seleccione un Tratamiento</option>
+            @foreach (var tratamiento in Model.Tratamientos)
+            {
+                <option value="@tratamiento">@tratamiento</option>
+            }
+        </select>
+        <span asp-validation-for="Tratamiento" class="text-danger"></span>
+    </div>
 
-    <label for="Promocion">Promoción:</label><br>
-    <select asp-for="Promocion" id="Promocion" onchange="actualizarPrecio()">
-        <option value="">Seleccione una promoción</option>
-        @foreach (var promo in Model.Promociones)
-        {
-            <option value="@promo">
-                @promo
-            </option>
-        }
-    </select>
-    <span asp-validation-for="Promocion" class="text-danger"></span><br>
+    <div class="form-group">
+        <label asp-for="Promocion" class="font-weight-bold">Promoción:</label>
+        <select asp-for="Promocion" id="Promocion" class="form-control" onchange="actualizarPrecio()">
+            <option value="" disabled selected>Seleccione una promoción</option> <!-- Opción deshabilitada por defecto -->
+            <option value="Sin promoción">Sin promoción</option> <!-- Valor único para "Sin promoción" -->
+            @foreach (var promo in Model.Promociones)
+            {
+                <option value="@promo">@promo</option>
+            }
+        </select>
+        <span asp-validation-for="Promocion" class="text-danger"></span>
+    </div>
 
-    <label asp-for="Fecha">Fecha:</label><br>
-    <input asp-for="Fecha" type="date" required /><br>
-    <span asp-validation-for="Fecha" class="text-danger"></span><br>
+    <script>
+        // Verifica antes de enviar el formulario que "Seleccione una promoción" no esté seleccionado
+        document.getElementById('Promocion').addEventListener('change', function () {
+            if (this.value === '') {
+                this.setCustomValidity('Por favor, seleccione una opción válida.');
+            } else {
+                this.setCustomValidity(''); // Elimina el mensaje si es una opción válida
+            }
+        });
+    </script>
 
-    <label asp-for="Precio">Precio:</label>
-    <input asp-for="Precio" type="number" step="0.01" class="form-control" required />
-    <span asp-validation-for="Precio" class="text-danger"></span><br>
 
-    <label asp-for="Estatus">Estatus:</label><br>
-    <select asp-for="Estatus" class="form-control" required>
-        <option value="Próximamente">Próximamente</option>
-        <option value="Realizado">Realizado</option>
-        <option value="Cancelado">Cancelado</option>
-    </select><br>
-    <span asp-validation-for="Estatus" class="text-danger"></span><br>
 
-    <a href="~/Citas/Index" class="btn btn-secondary">Cancelar</a>
-    <button type="submit" class="btn btn-success mt-3">Registrar Cita</button>
+    <div class="form-group">
+        <label asp-for="Fecha" class="font-weight-bold">Fecha:</label>
+        <input asp-for="Fecha" type="date" class="form-control" required />
+        <span asp-validation-for="Fecha" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Precio" class="font-weight-bold">Precio:</label>
+        <input asp-for="Precio" type="number" step="0.01" class="form-control" required />
+        <span asp-validation-for="Precio" class="text-danger"></span>
+    </div>
+
+
+    <div class="custom-form-group">
+        <label asp-for="Estatus">Estatus:</label><br>
+        <select asp-for="Estatus" class="form-control" required>
+            <option value="Próximamente" selected>Próximamente</option>
+        </select><br>
+        <span asp-validation-for="Estatus" class="text-danger"></span><br>
+    </div>
+
+    <div class="btn-container">
+        <a href="~/Citas/Index" class="btn btn-secondary me-2">Cancelar</a>
+        <button type="submit" class="btn btn-success">Agendar Cita</button>
+    </div>
 </form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

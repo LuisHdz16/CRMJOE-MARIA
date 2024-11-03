@@ -29,3 +29,34 @@ E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\crmEmpresa\crmEmpresa\
 E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\crmEmpresa\crmEmpresa\obj\Debug\net8.0\crmEmpresa.genruntimeconfig.cache
 E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\crmEmpresa\crmEmpresa\obj\Debug\net8.0\ref\crmEmpresa.dll
 E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\crmEmpresa\crmEmpresa\obj\Debug\net8.0\crmEmpresa.sourcelink.json
+C:\Users\aleja\Desktop\CRMJOE-MARIA\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\aleja\Desktop\CRMJOE-MARIA\bin\Debug\net8.0\appsettings.json
+C:\Users\aleja\Desktop\CRMJOE-MARIA\bin\Debug\net8.0\crmEmpresa.staticwebassets.runtime.json
+C:\Users\aleja\Desktop\CRMJOE-MARIA\bin\Debug\net8.0\crmEmpresa.exe
+C:\Users\aleja\Desktop\CRMJOE-MARIA\bin\Debug\net8.0\crmEmpresa.deps.json
+C:\Users\aleja\Desktop\CRMJOE-MARIA\bin\Debug\net8.0\crmEmpresa.runtimeconfig.json
+C:\Users\aleja\Desktop\CRMJOE-MARIA\bin\Debug\net8.0\crmEmpresa.dll
+C:\Users\aleja\Desktop\CRMJOE-MARIA\bin\Debug\net8.0\crmEmpresa.pdb
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\crmEmpresa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\crmEmpresa.AssemblyInfoInputs.cache
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\crmEmpresa.AssemblyInfo.cs
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\crmEmpresa.csproj.CoreCompileInputs.cache
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\crmEmpresa.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\crmEmpresa.RazorAssemblyInfo.cache
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\crmEmpresa.RazorAssemblyInfo.cs
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\crmEmpresa.sourcelink.json
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\staticwebassets\msbuild.crmEmpresa.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\staticwebassets\msbuild.build.crmEmpresa.props
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.crmEmpresa.props
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.crmEmpresa.props
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\scopedcss\bundle\crmEmpresa.styles.css
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\scopedcss\projectbundle\crmEmpresa.bundle.scp.css
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\crmEmpresa.dll
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\refint\crmEmpresa.dll
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\crmEmpresa.pdb
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\crmEmpresa.genruntimeconfig.cache
+C:\Users\aleja\Desktop\CRMJOE-MARIA\obj\Debug\net8.0\ref\crmEmpresa.dll

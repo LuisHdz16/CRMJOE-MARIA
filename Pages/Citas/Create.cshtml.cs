@@ -79,10 +79,17 @@ namespace crmEmpresa.Pages.Citas
                     }
                 }
             }
-
         }
+
         public IActionResult OnPost()
         {
+            // Validación para asegurarse de que no se envíe "Seleccione una promoción" como valor
+            if (string.IsNullOrEmpty(Promocion) || Promocion == "Seleccione una promoción")
+            {
+                ModelState.AddModelError("Promocion", "Por favor, seleccione una opción válida.");
+                return Page(); // Devuelve la página en caso de error
+            }
+
             if (!ModelState.IsValid)
             {
                 return Page();
@@ -96,6 +103,5 @@ namespace crmEmpresa.Pages.Citas
             TempData["SuccessMessage"] = "Cita registrada exitosamente!";
             return RedirectToPage("Index");
         }
-
     }
 }

@@ -3,7 +3,9 @@
 @{
 }
 
-<a href="~/Promociones/Create">Agregar Promoción</a>
+<link rel="stylesheet" href="~/css/PromoIndex.css">
+
+<a href="~/Promociones/Create" class="add-client-link">Agregar Promoción</a>
 
 <table class="table table-bordered">
     <thead>
@@ -27,12 +29,13 @@
                     <td>@promo.Descripcion</td>
                     <td>@promo.Estatus</td>
                     <td>
-                        <a asp-page="Edit" asp-route-id="@promo.Id" class="btn btn-warning btn-sm">Editar</a>
-                        <form method="post" asp-page-handler="Eliminar" asp-route-id="@promo.Id" style="display:inline;">
-                            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                        <a asp-page="Edit" asp-route-id="@promo.Id" class="btn btn-warning btn-mg">Editar</a>
+                        <form method="post" asp-page-handler="Eliminar" style="display:inline;">
+                            <button type="submit" class="btn btn-danger btn-mg">Eliminar</button>
                         </form>
-                        <a asp-page="/Promociones/DetallesPromocion" asp-route-promocionId="@promo.Id" class="btn btn-info">Enviar</a>
+                        <a asp-page="/Promociones/DetallesPromocion" asp-route-promocionId="@promo.Id" class="btn btn-info btn-lg">Enviar</a>
                     </td>
+
                 </tr>
              }
         }
